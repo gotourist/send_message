@@ -102,9 +102,8 @@ func FetchAllUsers() []User {
 //SendMessage - function for sending messages..................................................
 func SendMessage(clientnumber string, messageInfo string) {
 
-	//sms messa
-	api_Key := "c54c7077"
-	api_Secret := "gYkxLPk4zwc1pJU3"
+	api_Key := "xxxxxxxx"    //there should be vonage api_key
+	api_Secret := "xxxxxxxx" //there should be vonage api_secret
 	auth := vonage.CreateAuthFromKeySecret(api_Key, api_Secret)
 	smsClient := vonage.NewSMSClient(auth)
 	response, _ := smsClient.Send("Vonage APIs", clientnumber, messageInfo, vonage.SMSOpts{Type: "unicode"})
